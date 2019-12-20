@@ -7,10 +7,10 @@ const userController = require('../controllers/userController');
 router.post('/login', cors(), userController.userLogin);
 router.post('/create/user', cors(),  userController.createUser);
 // router.use(validateToken);
-router.get('/get/all/users', cors(), validateToken,  userController.getAllUsers);
-router.put('/modify/user/:userid', cors(), validateToken,  userController.modifiyThisUser);
-router.delete('/delete/user/:userid', cors(), validateToken,  userController.deleteThisUser);
-router.get('/', cors(), validateToken,  userController.start);
-router.get('/get/user/:userid', cors(), validateToken,  userController.getUser);
+router.get('/get/all/users', cors(),  userController.getAllUsers);
+router.put('/modify/user/:userid', cors(),  userController.modifiyThisUser);
+router.delete('/delete/user/:userid', cors(),  userController.deleteThisUser);
+router.get('/', cors(),  userController.start);
+router.get('/get/user/:userid', cors(),  userController.getUser);
 
 module.exports = { router };
